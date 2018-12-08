@@ -1,0 +1,257 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ----------------My CSS----------------- */
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-content: center;
+  font-family: "Permanent Marker", cursive;
+  font-size: 3em;
+  font-weight: 900;
+  /* background-color: #ff6138; */
+  color: #222222;
+}
+
+main {
+  width: 50vh;
+  height: 70vh;
+  display: grid;
+  /* border: 2px solid red; */
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.5fr 3fr 2fr 3fr 1.5fr;
+  background: rgba(252, 234, 187, 1);
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(252, 234, 187, 1) 0%,
+    rgba(251, 223, 147, 1) 29%,
+    rgba(248, 181, 0, 1) 100%
+  );
+  background: -webkit-gradient(
+    radial,
+    center center,
+    0px,
+    center center,
+    100%,
+    color-stop(0%, rgba(252, 234, 187, 1)),
+    color-stop(29%, rgba(251, 223, 147, 1)),
+    color-stop(100%, rgba(248, 181, 0, 1))
+  );
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(252, 234, 187, 1) 0%,
+    rgba(251, 223, 147, 1) 29%,
+    rgba(248, 181, 0, 1) 100%
+  );
+  background: -o-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(252, 234, 187, 1) 0%,
+    rgba(251, 223, 147, 1) 29%,
+    rgba(248, 181, 0, 1) 100%
+  );
+  background: -ms-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(252, 234, 187, 1) 0%,
+    rgba(251, 223, 147, 1) 29%,
+    rgba(248, 181, 0, 1) 100%
+  );
+  background: radial-gradient(
+    ellipse at center,
+    rgba(252, 234, 187, 1) 0%,
+    rgba(251, 223, 147, 1) 29%,
+    rgba(248, 181, 0, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#f8b500', GradientType=1 );
+}
+
+main div {
+  /* border: 2px solid red; */
+  display: grid;
+  justify-content: center;
+}
+
+.settings {
+  grid-template-columns: 1fr 8fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  text-align: center;
+}
+
+.computer img {
+  width: 150px;
+  transform: rotate(180deg);
+  justify-self: center;
+}
+
+.result {
+  justify-content: center;
+  align-content: center;
+  font-size: 1.3em;
+}
+
+.player img {
+  width: 150px;
+  /* transform: rotate(-90deg); */
+  justify-self: center;
+}
+
+.player,
+.computer {
+  font-size: 25px;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: transparent;
+  text-justify: auto;
+  text-align: center;
+}
+
+.player-points,
+.computer-points {
+  align-content: center;
+  background-color: transparent;
+}
+
+.footer {
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.footer img {
+  width: 70%;
+  /* border: 2px solid red; */
+  /* transform: rotate(-90deg); */
+  cursor: pointer;
+}

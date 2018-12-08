@@ -1,5 +1,6 @@
 let playerPoints = 0;
 let computerPoints = 0;
+
 const arr = ["rock", "scissors", "paper"];
 
 function game() {
@@ -11,8 +12,6 @@ function game() {
         return "rock";
       case "paper":
         return "paper";
-      case "scissors":
-        return "scissors";
       case "scissors":
         return "scissors";
       default:
