@@ -64,7 +64,7 @@ $(document).ready(function() {
   function changePlayerImage(choice) {
     $(".player > img")
       .first()
-      .attr("src", `/img/${choice}.png`);
+      .attr("src", `./img/${choice}.png`);
     let animationName = "animated wobble";
     let animationEnd =
       "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
@@ -79,7 +79,7 @@ $(document).ready(function() {
   function changeCompImage(choice) {
     $(".computer > img")
       .first()
-      .attr("src", `/img/${choice}.png`);
+      .attr("src", `./img/${choice}.png`);
     let animationName = "animated wobble";
     let animationEnd =
       "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
