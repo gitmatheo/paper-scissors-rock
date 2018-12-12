@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/devices.min.css" type="text/css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
@@ -27,35 +28,58 @@
   </head>
 
   <body>
-    <!-- <header><h1>Rock Paper Scissors</h1></header> -->
-    <main>
-      <div class="settings">
-        <div></div>
-        <p>Round: <span class="r-counter"></span></p>
-        <span style="font-size: 40px; color: #222222;;"
-          ><i class="fas fa-cog"></i
-        ></span>
+    <div class="marvel-device iphone-x">
+      <div class="notch">
+        <div class="camera"></div>
+        <div class="speaker"></div>
       </div>
-      <div class="computer">
-        <div class="computer-points">
-          Computer: <span class="c-points"></span>
-        </div>
-        <img src="./img/scissors.png" alt="scissors" />
-        <div></div>
+      <div class="top-bar"></div>
+      <div class="sleep"></div>
+      <div class="bottom-bar"></div>
+      <div class="volume"></div>
+      <div class="overflow">
+        <div class="shadow shadow--tr"></div>
+        <div class="shadow shadow--tl"></div>
+        <div class="shadow shadow--br"></div>
+        <div class="shadow shadow--bl"></div>
       </div>
-      <div class="result">You win !</div>
-      <div class="player">
-        <div class="player-points">Player: <span class="p-points"></span></div>
-        <img src="./img/rock.png" alt="rock" />
-        <div></div>
-      </div>
+      <div class="inner-shadow"></div>
+      <div class="screen">
+        <!-- Content goes here -->
+        <main>
+          <div class="settings">
+            <div></div>
+            <p class="round">Round: <span class="r-counter"></span></p>
 
-      <div class="footer">
-        <img src="./img/rock.png" alt="rock" />
-        <img src="./img/paper.png" alt="paper" />
-        <img src="./img/scissors.png" alt="scissors" />
+            <span style="font-size: 40px; color: #222222;;"
+              ><i class="fas fa-cog"></i
+            ></span>
+          </div>
+          <div class="computer">
+            <div class="computer-points">
+              Computer: <span class="c-points"></span>
+            </div>
+            <img id="cpu-img" src="./img/scissors.png" alt="scissors" />
+            <div></div>
+          </div>
+          <div class="result">You win !</div>
+          <div class="player">
+            <div class="player-points">
+              Player: <span class="p-points"></span>
+            </div>
+            <img id="player-img" src="./img/rock.png" alt="rock" />
+            <div></div>
+          </div>
+
+          <div class="footer">
+            <img src="./img/rock.png" alt="rock" />
+            <img src="./img/paper.png" alt="paper" />
+            <img src="./img/scissors.png" alt="scissors" />
+          </div>
+        </main>
       </div>
-    </main>
+    </div>
+
     <script></script>
   </body>
 </html>

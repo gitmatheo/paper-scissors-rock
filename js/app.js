@@ -20,6 +20,8 @@ $(document).ready(function() {
   }
 
   function playRound(playerSelection, computerSelection) {
+    roundCounter++;
+    $(".r-counter").text(roundCounter);
     if (
       (playerSelection == "paper" && computerSelection == "rock") ||
       (playerSelection == "scissors" && computerSelection == "paper") ||
@@ -46,7 +48,14 @@ $(document).ready(function() {
     }
 
     if (computerPoints == 5 || playerPoints == 5) {
+      //RESETING COUNTERS
       $(".result").text("GAME OVER");
+      playerPoints = 0;
+      computerPoints = 0;
+      $(".p-points").text(playerPoints);
+      $(".c-points").text(computerPoints);
+      roundCounter = 0;
+      $(".r-counter").text(roundCounter);
     } else {
       console.log(
         "Your selection: " +
@@ -107,8 +116,6 @@ $(document).ready(function() {
     let alt = $(this).attr("alt");
     playRound(alt, computerSelection());
     changePlayerImage(alt);
-    roundCounter++;
-    $(".r-counter").text(roundCounter);
   }
 
   $(".footer > img").click(game);
