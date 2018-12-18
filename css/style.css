@@ -1,138 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 /* ----------------My CSS----------------- */
 body {
   display: grid;
@@ -145,14 +10,10 @@ body {
   /* background-color: #ff6138; */
   color: #222222;
   height: 100vh;
-  background: #f0f4f5;
-  background: -moz-radial-gradient(center, ellipse cover, #f0f4f5 0%, #75bdd1 72%, #49a5bf 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f0f4f5), color-stop(72%, #75bdd1), color-stop(100%, #49a5bf));
-  background: -webkit-radial-gradient(center, ellipse cover, #f0f4f5 0%, #75bdd1 72%, #49a5bf 100%);
-  background: -o-radial-gradient(center, ellipse cover, #f0f4f5 0%, #75bdd1 72%, #49a5bf 100%);
-  background: -ms-radial-gradient(center, ellipse cover, #f0f4f5 0%, #75bdd1 72%, #49a5bf 100%);
   background: radial-gradient(ellipse at center, #f0f4f5 0%, #75bdd1 72%, #49a5bf 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f0f4f5", endColorstr="#49a5bf", GradientType=1 );
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
 }
 
 main {
@@ -162,14 +23,44 @@ main {
   /* border: 2px solid red; */
   grid-template-columns: 1fr;
   grid-template-rows: 1.5fr 3fr 2fr 3fr 1.5fr;
-  background: #fceabb;
-  background: -moz-radial-gradient(center, ellipse cover, #fceabb 0%, #fbdf93 29%, #f8b500 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #fceabb), color-stop(29%, #fbdf93), color-stop(100%, #f8b500));
-  background: -webkit-radial-gradient(center, ellipse cover, #fceabb 0%, #fbdf93 29%, #f8b500 100%);
-  background: -o-radial-gradient(center, ellipse cover, #fceabb 0%, #fbdf93 29%, #f8b500 100%);
-  background: -ms-radial-gradient(center, ellipse cover, #fceabb 0%, #fbdf93 29%, #f8b500 100%);
+}
+
+main,
+#start-game,
+#results {
   background: radial-gradient(ellipse at center, #fceabb 0%, #fbdf93 29%, #f8b500 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#fceabb", endColorstr="#f8b500", GradientType=1 );
+}
+
+#start-game,
+#results {
+  font-size: 2em;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.play {
+  animation: flash 1.5s infinite;
+}
+
+.flash-fast {
+  animation: flash 0.5s infinite;
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
 }
 
 main div {
@@ -238,6 +129,14 @@ main div {
   cursor: pointer;
 }
 
+.none {
+  display: none;
+}
+
+.visible {
+  z-index: 222;
+}
+
 /* ======================================
  
     MediaQuery-Reporter Styles
@@ -279,8 +178,6 @@ body:after {
     background-color: rgba(163, 41, 41, 0.7);
   }
 }
-.foobar {
-  background: #a74c4c;
-}
+/* # sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */
